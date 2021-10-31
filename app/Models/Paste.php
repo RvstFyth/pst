@@ -13,4 +13,9 @@ class Paste extends Model
         'password',
         'expires'
     ];
+
+    public $hidden = [
+        'password',
+        'token'
+    ];
 }

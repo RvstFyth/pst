@@ -16,7 +16,7 @@ class ViewPasteController extends Controller
         $paste = Paste::find($id);
 
         if($paste) {
-            if($raw) {
+            if($raw === 'raw') {
                 print nl2br(e($paste->paste));
             }
             else {

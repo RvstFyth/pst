@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // cat artisan | curl -F 'paste=<-' localhost/api/
 Route::post('/', 'App\Http\Controllers\Api\AddPasteController@index');
+Route::get('/{id}/{raw?}', 'App\Http\Controllers\Api\GetPasteController@index')->whereNumber('id');
