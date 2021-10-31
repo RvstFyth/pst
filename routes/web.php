@@ -28,6 +28,6 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/paste/{id}', 'App\Http\Controllers\Www\ViewPasteController@index')->whereNumber('id');
+Route::get('/paste/{id}/{raw?}', 'App\Http\Controllers\Www\ViewPasteController@index')->whereNumber('id');
 
 require __DIR__.'/auth.php';
